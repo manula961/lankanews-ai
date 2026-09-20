@@ -1,0 +1,1 @@
+import {NextResponse} from "next/server";import {ingest} from "@/lib/rss";export const maxDuration=60;export async function GET(){return NextResponse.json(await ingest())}export async function POST(){return NextResponse.json(await ingest())}
