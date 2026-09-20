@@ -21,3 +21,19 @@ Sri Lankan news intelligence dashboard built with Next.js.
 5. Run npm install, npm run db:init, npm run dev.
 
 The original publisher remains the source of record. AI summaries are generated only from available feed text and should be checked against the original article.
+
+## Expanded intelligence modules
+- News map and district intelligence: /map and /districts
+- Topic trends: /trends
+- Cross-source comparison: /compare
+- Event/story cluster tracker: /events
+- Historical archive: /archive
+- Research mode: /research
+- Sports and business dashboards: /sports and /business
+- Disaster/emergency monitor: /emergency
+- Embeddable/read-only API guide: /widgets and /api/openapi.json
+- RSS output: /api/rss
+- Health endpoint: /api/health
+- Translation endpoint: POST /api/translate (requires OPENAI_API_KEY)
+
+The system keeps original publisher URLs and labels AI-assisted features. Political coverage is presented descriptively and source-attributed; the product does not rank political actors or recommend electoral choices.
