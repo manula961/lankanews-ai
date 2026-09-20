@@ -1,0 +1,1 @@
+# LankaNews AI\n\nSri Lankan news intelligence dashboard. RSS ingestion, categorization, search and source links. Vercel cron runs ingestion every 15 minutes. For production, replace the in-memory store with PostgreSQL/pgvector and add cron authentication.
