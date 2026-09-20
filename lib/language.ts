@@ -1,0 +1,1 @@
+export type Language="si"|"ta"|"en"|"mixed";export function detectLanguage(text:string):Language{const si=(text.match(/[\u0D80-\u0DFF]/g)||[]).length,ta=(text.match(/[\u0B80-\u0BFF]/g)||[]).length,latin=(text.match(/[A-Za-z]/g)||[]).length;if(si>ta&&si>latin*.12)return"si";if(ta>si&&ta>latin*.12)return"ta";if(latin>0)return"en";return"mixed"}
