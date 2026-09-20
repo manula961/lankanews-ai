@@ -1,0 +1,1 @@
+"use client";export default function Error({reset}:{error:Error&{digest?:string};reset:()=>void}){return <main className="toolPage"><h1>Something went wrong</h1><p>We could not load this page. Try again.</p><button onClick={()=>reset()}>Try again</button><a href="/">Back to LankaNews AI</a></main>}
