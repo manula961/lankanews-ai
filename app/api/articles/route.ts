@@ -1,1 +1,1 @@
-import {NextResponse} from "next/server";import {getArticles,stats} from "@/lib/store";export async function GET(){return NextResponse.json({articles:getArticles(),stats:stats()})}
+import {NextResponse} from "next/server";import {getArticles,stats} from "@/lib/store";export const dynamic="force-dynamic";export async function GET(){const [articles,summary]=await Promise.all([getArticles(),stats()]);return NextResponse.json({articles,stats:summary})}
