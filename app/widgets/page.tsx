@@ -1,0 +1,1 @@
+export default function Widgets(){return <main className="toolPage"><h1>Embeddable News Widgets</h1><p>Read-only endpoints for headlines, trends, search and RSS.</p><pre>GET /api/v1/articles{String.fromCharCode(10)}GET /api/v1/trending{String.fromCharCode(10)}GET /api/v1/search?q=economy{String.fromCharCode(10)}GET /api/rss</pre></main>}
