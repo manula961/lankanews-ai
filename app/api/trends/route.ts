@@ -1,0 +1,1 @@
+import {NextResponse} from "next/server";import {getArticles} from "@/lib/store";import {trendData} from "@/lib/intelligence";export async function GET(req:Request){const u=new URL(req.url);const h=Math.min(168,Math.max(1,Number(u.searchParams.get("hours")||24)));return NextResponse.json({hours:h,trends:trendData(await getArticles(),h)})}
