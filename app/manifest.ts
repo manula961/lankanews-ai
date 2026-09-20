@@ -1,0 +1,1 @@
+import type{MetadataRoute}from"next";export default function manifest():MetadataRoute.Manifest{return{name:"LankaNews AI",short_name:"LankaNews",description:"Sri Lankan multilingual news intelligence",start_url:"/",display:"standalone",background_color:"#080a0b",theme_color:"#080a0b",icons:[]}}
