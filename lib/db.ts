@@ -1,0 +1,4 @@
+import {neon} from "@neondatabase/serverless";
+let client: ReturnType<typeof neon>|null=null;
+export function getSql(){if(!process.env.DATABASE_URL)return null;if(!client)client=neon(process.env.DATABASE_URL);return client;}
+export async function ensureSchema(){const sql=getSql();if(!sql)return false;await sql("CREATE TABLE IF NOT EXISTS articles (id TEXT PRIMARY KEY,title TEXT NOT NULL,summary TEXT NOT NULL,source TEXT NOT NULL,source_url TEXT NOT NULL,article_url TEXT NOT NULL UNIQUE,category TEXT NOT NULL,published_at TIMESTAMPTZ NOT NULL,cluster_id TEXT,created_at TIMESTAMPTZ NOT NULL DEFAULT NOW())");await sql("CREATE INDEX IF NOT EXISTS articles_published_idx ON articles(published_at DESC)");await sql("CREATE INDEX IF NOT EXISTS articles_category_idx ON articles(category)");return true;}
