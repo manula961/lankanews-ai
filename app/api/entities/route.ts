@@ -1,0 +1,1 @@
+import{NextResponse}from"next/server";import{getArticles}from"@/lib/store";import{entityIndex}from"@/lib/entities";export async function GET(){return NextResponse.json({entities:entityIndex(await getArticles())})}
