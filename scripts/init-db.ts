@@ -1,0 +1,1 @@
+import {ensureSchema} from "../lib/db"; await ensureSchema(); console.log("Database schema initialized.");
