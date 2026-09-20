@@ -1,0 +1,1 @@
+import {NextResponse} from "next/server";import {getArticles} from "@/lib/store";import {districtNames,districtFor} from "@/lib/intelligence";export async function GET(){const a=await getArticles();return NextResponse.json({districts:districtNames.map(name=>({name,count:a.filter(x=>districtFor(x)===name).length,stories:a.filter(x=>districtFor(x)===name).slice(0,5)}))})}
