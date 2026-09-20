@@ -1,0 +1,1 @@
+export default function Loading(){return <main className="toolPage"><p>Loading LankaNews AI…</p></main>}
