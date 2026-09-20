@@ -1,0 +1,1 @@
+import{NextResponse}from"next/server";import{getArticles}from"@/lib/store";export async function GET(){const alerts=(await getArticles()).filter(x=>Date.now()-+new Date(x.publishedAt)<30*60000).slice(0,20);return NextResponse.json({alerts})}
