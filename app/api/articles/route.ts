@@ -1,0 +1,1 @@
+import {NextResponse} from "next/server";import {getArticles,stats} from "@/lib/store";export async function GET(){return NextResponse.json({articles:getArticles(),stats:stats()})}
