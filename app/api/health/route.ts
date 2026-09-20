@@ -1,0 +1,1 @@
+import {NextResponse} from "next/server";import {stats} from "@/lib/store";export async function GET(){try{return NextResponse.json({ok:true,time:new Date().toISOString(),stats:await stats()})}catch(e){return NextResponse.json({ok:false,error:String(e)},{status:500})}}
