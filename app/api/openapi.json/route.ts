@@ -1,0 +1,1 @@
+import{NextResponse}from"next/server";export async function GET(){return NextResponse.json({openapi:"3.0.3",info:{title:"LankaNews AI API",version:"1.0.0"},paths:{"/api/v1/articles":{get:{summary:"List articles"}}, "/api/v1/trending":{get:{summary:"Trending topics"}}, "/api/v1/search":{get:{summary:"Search articles"}}, "/api/rss":{get:{summary:"RSS feed"}}}})}
