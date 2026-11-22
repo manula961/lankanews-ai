@@ -1,4 +1,19 @@
-# LankaNews AI
+<h1 align="center">📰 LankaNews AI</h1>
+
+<p align="center"><strong>Follow Sri Lankan news across publishers and languages.</strong></p>
+
+<p align="center">
+  <img alt="Next.js" src="https://img.shields.io/static/v1?label=&amp;message=Next.js&amp;color=047857&amp;style=for-the-badge">
+  <img alt="RSS" src="https://img.shields.io/static/v1?label=&amp;message=RSS&amp;color=1D4ED8&amp;style=for-the-badge">
+  <img alt="PostgreSQL" src="https://img.shields.io/static/v1?label=&amp;message=PostgreSQL&amp;color=B45309&amp;style=for-the-badge">
+</p>
+
+<p align="center">
+  <a href="#project-summary">Project summary</a> · <a href="#expanded-intelligence-modules">Expanded intelligence modules</a> · <a href="#setup">Setup</a> · <a href="#production-checklist">Production checklist</a>
+</p>
+
+---
+
 
 Sri Lankan news intelligence dashboard built with Next.js.
 
