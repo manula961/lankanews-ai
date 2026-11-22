@@ -3,9 +3,7 @@
 <p align="center"><strong>Follow Sri Lankan news across publishers and languages.</strong></p>
 
 <p align="center">
-  <img alt="Next.js" src="https://img.shields.io/static/v1?label=&amp;message=Next.js&amp;color=047857&amp;style=for-the-badge">
-  <img alt="RSS" src="https://img.shields.io/static/v1?label=&amp;message=RSS&amp;color=1D4ED8&amp;style=for-the-badge">
-  <img alt="PostgreSQL" src="https://img.shields.io/static/v1?label=&amp;message=PostgreSQL&amp;color=B45309&amp;style=for-the-badge">
+  <img src="docs/readme-cover.svg" alt="LankaNews AI project illustration" width="1120">
 </p>
 
 <p align="center">
