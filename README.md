@@ -2,15 +2,24 @@
 
 Sri Lankan news intelligence dashboard built with Next.js.
 
+## Project summary
+
+LankaNews AI collects stories from Sri Lankan publishers and helps readers follow coverage across outlets. The dashboard combines category and language filters with story clusters, timelines, district views, and research tools.
+
+1. [RSS ingestion](lib/rss.ts) retrieves feed items and keeps their original publisher links.
+2. [Classification](lib/classify.ts) and [clustering](lib/cluster.ts) attach categories and group related coverage.
+3. [The article store](lib/store.ts) saves records in PostgreSQL when configured. Without a database URL it uses sample data and process memory, so changes are temporary.
+4. The [daily brief](app/api/brief/route.ts), [RSS feed](app/api/rss/route.ts), and [open API description](app/api/openapi.json/route.ts) provide additional ways to consume coverage. AI-assisted summaries and translations require an OpenAI API key.
+
 ## Included
 - RSS ingestion from Sri Lankan publishers
 - Sinhala/Tamil/English keyword categorization
-- PostgreSQL persistence (Supabase-compatible) when DATABASE_URL is configured
+- PostgreSQL persistence through the Neon serverless client in [lib/db.ts](lib/db.ts) when `DATABASE_URL` is configured
 - Canonical URL deduplication
 - Lightweight duplicate-story clustering
 - Daily brief API at /api/brief
 - Optional OpenAI article summaries at /api/summarize
-- Protected ingestion using CRON_SECRET
+- Ingestion requires a bearer token when `CRON_SECRET` is configured
 - Vercel Cron every 15 minutes
 
 ## Setup
@@ -40,7 +49,7 @@ The system keeps original publisher URLs and labels AI-assisted features. Politi
 
 
 ## Production checklist
-- Configure Supabase `DATABASE_URL` and run `npm run db:init` once.
+- Configure the PostgreSQL `DATABASE_URL` and run `npm run db:init` once.
 - Configure `CRON_SECRET` and keep it private.
 - Optionally configure `OPENAI_API_KEY` for AI summaries, digest, research, and translation features.
 - Deploy the repository to Vercel with the same environment variables.
