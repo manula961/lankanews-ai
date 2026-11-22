@@ -28,7 +28,7 @@ Copy [the environment template](.env.example) for database persistence or AI fea
 ## Project reference
 
 <details>
-<summary>Expand detailed documentation</summary>
+<summary><strong>📰 Ingestion, storage, and setup</strong></summary>
 
 Sri Lankan news intelligence dashboard built with Next.js.
 
@@ -78,6 +78,11 @@ LankaNews AI collects stories from Sri Lankan publishers and helps readers follo
 The original publisher remains the source of record. AI summaries are generated only from available feed text and should be checked against the original article.
 
 ---
+
+</details>
+
+<details>
+<summary><strong>📊 Intelligence modules and production checklist</strong></summary>
 
 ## Expanded intelligence modules
 
