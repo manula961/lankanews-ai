@@ -6,16 +6,33 @@
   <img src="docs/readme-cover.svg" alt="LankaNews AI project illustration" width="1120">
 </p>
 
-<p align="center">
-  <a href="#project-summary">Project summary</a> · <a href="#expanded-intelligence-modules">Expanded intelligence modules</a> · <a href="#setup">Setup</a> · <a href="#production-checklist">Production checklist</a>
-</p>
+<p align="center"><a href="#project-summary">Project summary</a> · <a href="#quick-start">Quick start</a> · <a href="#project-reference">Project reference</a></p>
 
----
+## Project summary
 
+Follow Sri Lankan news across publishers, languages, and districts.
+
+| 🗺️ Explore | 📰 Compare | 🛠️ Reuse |
+| --- | --- | --- |
+| [Districts](app/districts/page.tsx) and [map](app/map/page.tsx) | [Coverage comparison](app/compare/page.tsx) and [story clusters](app/events/page.tsx) | [RSS](app/api/rss/route.ts) and [OpenAPI](app/api/openapi.json/route.ts) |
+
+## Quick start
+
+```sh
+npm install
+npm run dev
+```
+
+Copy [the environment template](.env.example) for database persistence or AI features. Without a database URL, the app uses sample data and temporary process memory.
+
+## Project reference
+
+<details>
+<summary>Expand detailed documentation</summary>
 
 Sri Lankan news intelligence dashboard built with Next.js.
 
-## Project summary
+## Detailed overview
 
 ```mermaid
 flowchart LR
@@ -97,3 +114,5 @@ The system keeps original publisher URLs and labels AI-assisted features. Politi
 - The scheduled `/api/ingest` job runs every 15 minutes from `vercel.json`.
 - `/api/health` can be used as a deployment health check.
 - Original publisher links remain the source of record; AI output is clearly labeled.
+
+</details>
